@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Lamp Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-on="false">
+
+    <div class="ambient-glow"></div>
+
+    <main class="container">
+
+        <h1>Interactive Lamp Login / Signup</h1>
+
+        <div class="main-content">
+
+            <!-- Lamp Section -->
+            <section class="lamp-section">
+
+                <div class="lamp-glow"></div>
+
+                <svg class="lamp" viewBox="0 0 300 350">
+
+                    <!-- Lamp Shade -->
+                    <path class="shade"
+                        d="M75 75 Q90 5 150 10 Q210 15 225 105 L75 75 Z"/>
+
+                    <ellipse class="shade-bottom"
+                        cx="150" cy="105" rx="75" ry="13"/>
+
+                    <!-- Lamp Stand -->
+                    <path class="stand"
+                        d="M100 120 L75 245 L115 320"/>
+
+                    <circle class="joint" cx="100" cy="120" r="9"/>
+                    <circle class="joint" cx="75" cy="245" r="9"/>
+                    <ellipse class="base" cx="115" cy="325"
+                        rx="75" ry="15"/>
+
+                    <!-- Bulb -->
+                    <circle class="bulb" cx="150" cy="85" r="13"/>
+
+                    <!-- Pull String -->
+                    <g id="pullCord" role="button"
+                       tabindex="0" aria-label="Toggle lamp light">
+
+                        <line class="cord"
+                            x1="150" y1="105"
+                            x2="150" y2="195"/>
+
+                        <line class="cord-hit"
+                            x1="150" y1="105"
+                            x2="150" y2="195"/>
+
+                        <circle class="pull-knob"
+                            cx="150" cy="202" r="12"/>
+                    </g>
+
+                </svg>
+
+                <p class="hint">Pull the string to turn ON / OFF</p>
+
+            </section>
+
+            <!-- Login Signup Section -->
+            <section class="auth-panel">
+
+                <div class="form-box">
+
+                    <h2 id="formTitle">Welcome Back!</h2>
+
+                    <p class="subtitle">
+                        Login to your account
+                    </p>
+
+                    <div class="tabs">
+                        <button id="loginTab" class="active">
+                            Login
+                        </button>
+
+                        <button id="signupTab">
+                            Signup
+                        </button>
+                    </div>
+
+                    <form id="authForm">
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your Name"
+                            class="signup-field"
+                        >
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Email Address"
+                            required
+                        >
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Password"
+                            required
+                            minlength="6"
+                        >
+
+                        <button type="submit" class="submit-btn">
+                            Login
+                        </button>
+
+                    </form>
+
+                    <p id="message"></p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
